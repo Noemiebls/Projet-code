@@ -1,14 +1,13 @@
-:root {
-  --primary-blue: #0077b6;
-  --secondary-blue: #00b4d8;
-  --light-blue: #90e0ef;
-  --dark-blue: #023047;
-  --navy-blue: #023e8a;
-  --deep-blue: #03045e;
-  --pale-blue: #caf0f8;
-  --white: #ffffff;
-  --font-heading: 'Anton', sans-serif;
-  --font-body: 'Amatic SC', cursive;
+
+ .anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+
+  .amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 * {
   margin: 0;
@@ -16,113 +15,114 @@
   box-sizing: border-box;
 }
 body {
-  font-family: var(--font-body);
+
   background-color: #f0f8fb;
-  color: var(--dark-blue);
+
   line-height: 1.6;
 }
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
+h2,p{
+    font-family: "Anton", sans-serif;
+}
+h1{font-size: 60px}
+h1, h3,h4,ul {
+  font-family:  "Amatic SC", sans-serif;;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 header {
-  background: linear-gradient(120deg, var(--primary-blue), var(--secondary-blue), var(--light-blue));
-  color: var(--white);
+  
+  color: white;
   text-align: center;
-  padding: 60px 0;
+  display: flex;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-header h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  letter-spacing: 3px;
-}
+
 .navbar {
-  background-color: var(--navy-blue);
+  background-color: transparent;
   text-align: center;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
+      align-items: center;
+  gap: 30px;
 }
 
 .navbar li {
   margin: 10px 20px;
 }
 .navbar a {
-  color: var(--white);
+  color: white;
   text-decoration: none;
   font-size: 1.3rem;
   transition: color 0.3s, border-bottom 0.3s;
   padding-bottom: 5px;
+  
 }
-.navbar a:hover,
-.navbar a:focus {
-  color: var(--light-blue);
-  border-bottom: 2px solid var(--light-blue);
+.navbar a:hover
+ {
+  color: white;
+  border-bottom: 2px solid #F0B33D;
 }
 
-.navbar a:focus {
-  outline: 2px solid var(--light-blue);
-  outline-offset: 2px;
-}
-.accueil {
-  background: url("images/accueil.jpg") center/cover no-repeat;
-  height: 500px;
+
+.home {
+  background: url("images/femmes.jpg") ;
+  height: 700px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--white);
+    align-items: center;
+    flex-direction: column;
+  
+  color: white;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
   position: relative;
 }
-.accueil::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
 
 .slogan {
-  position: relative;
+ 
   z-index: 1;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  text-align: center;
+  font-size:25px ;
+ margin-left: 950px;
+    margin-top: 200px;
   animation: fadeIn 2s ease forwards;
+  text-align: center;
 }
+.ame{color: #F0B33D;}
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .propos {
-  background-color: var(--white);
-  text-align: center;
-  padding: 80px 20px;
+  background-color:#9BCF61 ;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+display: flex;
+justify-content: center;
 }
 
 .propos h3 {
-  color: var(--primary-blue);
-  margin-bottom: 20px;
-  font-size: 2rem;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 30px;
+  display: flex;
 }
 .propos p {
   max-width: 700px;
-  margin: 0 auto 30px;
-  font-size: 1.2rem;
-  color: var(--dark-blue);
+  font-size: 20px;
+  color: white;
   line-height: 1.8;
+  margin-right: 40px;
+  text-align: left;
 }
 
 .propos .logo {
-  width: 120px;
-  margin-top: 10px;
+  width: 250px;
+  height: 250px;
+
 }
+
 .galerie {
   background-color: var(--pale-blue);
   padding: 80px 20px;
@@ -160,7 +160,7 @@ header h1 {
   align-items: flex-start;
   gap: 40px;
   padding: 70px 20px;
-  background: linear-gradient(120deg, var(--primary-blue), #0096c7);
+  background: #80ACD7;
   color: var(--white);
 }
 .contact h4 {
@@ -199,8 +199,8 @@ header h1 {
 }
 
 .mail button {
-  background-color: var(--navy-blue);
-  color: var(--white);
+ 
+  color: #F0B33D;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -211,8 +211,8 @@ header h1 {
 }
 
 .mail button:hover {
-  background-color: var(--light-blue);
-  color: var(--dark-blue);
+  background-color: black;
+  color: #F0B33D;
 }
 
 .ocean .logo {
@@ -284,4 +284,3 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
-
