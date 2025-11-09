@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Amatic SC', cursive;
+  background-color: #f0f8fb;
+  color: #023047;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header {
+  background: linear-gradient(120deg, #0077b6, #00b4d8, #90e0ef);
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+}
+.navbar {
+  background-color: #023e8a;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  margin: 10px 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
+}
+
+.navbar a:hover {
+  color: #90e0ef;
+  border-bottom: 2px solid #90e0ef;
+}
+.accueil {
+  background: url("images/accueil.jpg") center/cover no-repeat;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.accueil::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.slogan {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  text-align: center;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
