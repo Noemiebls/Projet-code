@@ -1,0 +1,330 @@
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-color: #f0f8fb;
+
+  line-height: 1.6;
+}
+
+h2,
+p {
+  font-family: "Anton", sans-serif;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 60px
+}
+
+h1,
+h3,
+h4,
+ul {
+  font-family: "Amatic SC", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+ul {
+  font-size: 30px;
+}
+
+header {
+
+  color: white;
+  text-align: center;
+  display: flex;
+
+}
+
+
+.navbar {
+  background-color: transparent;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-right: 200px;
+}
+
+.navbar li {
+  margin: 10px 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
+
+}
+
+.navbar a:hover {
+  color: white;
+  border-bottom: 2px solid #F0B33D;
+}
+
+h1 a {
+  font-size: inherit; 
+  text-decoration: none;
+}
+.home {
+  background: url("images/femmes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+}
+
+.slogan {
+
+  z-index: 1;
+  font-size: 25px;
+  margin-top: 200px;
+  animation: fadeIn 2s ease forwards;
+  text-align: center;
+}
+.slogan h2{
+  display: flex;
+  justify-content: right;
+}
+.ame {
+  color: #F0B33D;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.propos {
+  background-color: #93c65ac7;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+}
+
+.propos h3 {
+  color: white;
+
+  font-size: 50px;
+  display: flex;
+  text-shadow: -1px -1px 4px rgb(0 0 0 / 39%);
+}
+
+.propos p {
+  max-width: 700px;
+  font-size: 20px;
+  color: white;
+  line-height: 1.8;
+  margin-right: 40px;
+  text-align: left;
+  text-shadow: -1px -1px 4px rgb(0 0 0 / 39%);
+}
+
+.textpropos {
+  display: flex;
+  flex-direction: column;
+}
+
+.propos .logo {
+  width: 400px;
+  height: 400px;
+
+  margin-top: 200px;
+}
+
+.galerie {
+  background-color: var(--pale-blue);
+  padding: 80px 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.galerie h3 {
+  color: #f0b33d;
+
+  text-shadow: 0px 4px 10px rgb(0 0 0 / 36%);
+  font-size: 50px;
+}
+
+.photos {
+
+  gap: 50px;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid 6px #f0b33d;
+  padding: 30px;
+}
+
+.boeufs {
+  width: 300px;
+
+}
+
+.pirogue {
+  width: 300px;
+
+}
+
+.tambour {
+  width: 300px;
+  margin-bottom: 80px;
+}
+
+.enfants {
+  width: 483px;
+
+}
+
+.tamtam {
+  width: 483px;
+
+}
+
+.photos img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background: #e0e0e0;
+  min-height: 150px;
+}
+
+.photos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 70px 20px;
+  background: #80ACD7;
+  color: var(--white);
+}
+
+.contact h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.questions,
+.ocean {
+  width: 320px;
+  text-align: center;
+}
+
+.mail {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.mail label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.mail input,
+.mail textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  transition: border-color 0.3s;
+}
+
+.mail input:focus,
+.mail textarea:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+}
+
+.mail button {
+
+  color: #F0B33D;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.mail button:hover {
+  background-color: black;
+  color: #F0B33D;
+}
+
+.ocean .logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: var(--deep-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .slogan {
+    font-size: 1.8rem;
+  }
+
+  .photos {
+    grid-template-columns: 1fr;
+  }
+}
+
