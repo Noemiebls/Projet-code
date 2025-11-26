@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .anton-regular {
     font-family: "Anton", sans-serif;
     font-weight: 400;
@@ -10,16 +16,12 @@
     font-style: normal;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
-
+position: relative;
+  min-height: 100vh;
     background-color: #f0f8fb;
-
     line-height: 1.6;
 }
 
@@ -40,7 +42,7 @@ ul {
 }
 
 ul {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 header {
@@ -62,7 +64,7 @@ header {
     display: flex;
     align-items: center;
     gap: 100px;
-    margin-right: 200px;
+   
 }
 
 .navbar li {
@@ -84,7 +86,7 @@ header {
 
 
 .home {
-    background: url("images/femmes.jpg");
+    background: url("images/femmes.webp");
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
@@ -238,10 +240,10 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px;
+    gap: 340px;
     padding: 70px 20px;
     background: #80ACD7;
-    color: var(--white);
+   
 }
 
 .contact h4 {
@@ -259,6 +261,7 @@ header {
     flex-direction: row ;
     text-align: left;
    border: none;
+   gap: 10px;
 }
 
 .mail label {
@@ -270,29 +273,22 @@ header {
 .mail textarea {
     width: 100%;
     padding-right: 60px;
+    padding-left: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-  
      font-family: "Anton", sans-serif;
     font-size: 12px;
     transition: border-color 0.3s;
 }
 
-.mail input:focus,
-.mail textarea:focus {
-    border-color: var(--primary-blue);
-    outline: none;
-}
-
 .mail button {
 
-    color: #F0B33D;
+    color: #000000;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 22px;
+    background-color: #F0B33D;
     transition: background 0.3s;
 }
 
@@ -300,21 +296,18 @@ header {
     background-color: black;
     color: #F0B33D;
 }
-.textocean{
-     display: flex;
-   flex-direction: column;
-}
+
 .ocean{
-    display: flex;}
-.regroupement {
-       display: flex;
-   flex-direction: column;
-   gap: 60px;
-   align-items:flex-end;
+    display:flex;
 }
 .ocean .logo {
     width: 100px;
     margin-bottom: 10px;
+}
+
+.textocean{
+     display: flex;
+   flex-direction: column;
 }
 .infos{
    display: flex;
@@ -322,15 +315,25 @@ header {
    gap: 5px;
 }
 
+.regroupement{
+     display: flex;
+   flex-direction: column;
+   gap: 60px;
+   align-items: flex-end;
+}
 footer {
-    background-color: var(--deep-blue);
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
+   position: absolute;
+  bottom: 0;
+      display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    gap: 10px;
 }
 
-
+footer .fa{
+    display: flex;
+    align-items: end;
+}
 
 @media (max-width: 480px) {
     header h1 {
