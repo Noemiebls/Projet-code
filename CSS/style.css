@@ -246,20 +246,19 @@ header {
 
 .contact h4 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
 }
 
 .questions,
 .ocean {
     width: 320px;
-    text-align: center;
+    text-align: left;
 }
 
 .mail {
     display: flex;
-    flex-direction: column;
+    flex-direction: row ;
     text-align: left;
-    margin-top: 20px;
+   border: none;
 }
 
 .mail label {
@@ -270,12 +269,12 @@ header {
 .mail input,
 .mail textarea {
     width: 100%;
-    padding: 10px;
+    padding-right: 60px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-bottom: 15px;
-    font-family: var(--font-body);
-    font-size: 1.1rem;
+  
+     font-family: "Anton", sans-serif;
+    font-size: 12px;
     transition: border-color 0.3s;
 }
 
@@ -301,10 +300,26 @@ header {
     background-color: black;
     color: #F0B33D;
 }
-
+.textocean{
+     display: flex;
+   flex-direction: column;
+}
+.ocean{
+    display: flex;}
+.regroupement {
+       display: flex;
+   flex-direction: column;
+   gap: 60px;
+   align-items:flex-end;
+}
 .ocean .logo {
     width: 100px;
     margin-bottom: 10px;
+}
+.infos{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
 }
 
 footer {
