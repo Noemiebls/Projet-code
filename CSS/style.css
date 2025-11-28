@@ -19,8 +19,8 @@
 
 
 body {
-position: relative;
-  min-height: 100vh;
+    position: relative;
+    min-height: 100vh;
     background-color: #f0f8fb;
     line-height: 1.6;
 }
@@ -64,7 +64,7 @@ header {
     display: flex;
     align-items: center;
     gap: 100px;
-   
+
 }
 
 .navbar li {
@@ -95,6 +95,28 @@ header {
     flex-direction: column;
     color: white;
     position: relative;
+     overflow: visible;
+}
+
+.phone {
+    position: relative;
+    display: inline-block;
+}
+
+.num {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f928;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+     white-space: nowrap;
+     right: 0
+}
+
+.phone:hover .num {
+    display: block;
+    
 }
 
 .slogan {
@@ -106,7 +128,7 @@ header {
     animation: fadeIn 2s ease forwards;
     text-align: center;
     align-self: flex-end;
-   padding-right: 20px;
+    padding-right: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,22 +181,27 @@ header {
     margin-right: 40px;
     text-align: left;
     text-shadow: -1px -1px 4px rgb(0 0 0 / 39%);
+
 }
 
 .textpropos {
     display: flex;
     flex-direction: column;
+    display: block;
 }
+ .proposmobile{
+    display: none;
+ font-family: "Anton", sans-serif;
+ color: white;
+ }
 
 .propos .logo {
     width: 400px;
     height: 400px;
-
     margin-top: 200px;
 }
 
 .galerie {
-    background-color: var(--pale-blue);
     padding: 80px 20px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -196,6 +223,19 @@ header {
     justify-content: center;
     border: solid 6px #f0b33d;
     padding: 30px;
+}
+
+.hidden {
+    display: none;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+}
+
+.toggle-checkbox {
+    display: none;
 }
 
 .boeufs {
@@ -223,6 +263,28 @@ header {
 
 }
 
+.tamoul {
+    width: 260px;
+    height: 200px;
+}
+
+.bateau {
+    width: 400px;
+
+}
+
+.beach {
+    width: 400px;
+}
+
+.dames {
+    width: 400px;
+}
+
+.menage {
+    width: 200px;
+}
+
 .photos img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -234,34 +296,77 @@ header {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+.toggle-checkbox:checked~.photos .hidden {
+    display: flex;
+}
+
+.voir {
+    background-color: #F0B33D;
+    width: 150px;
+    margin-top: 20px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.voir:hover{
+    background-color: #b28730;
+}
+
+.voir-moins {
+    display: none;
+}
+
+.toggle-checkbox:checked~.voir .voir-plus {
+    display: none;
+}
+
+.toggle-checkbox:checked~.voir .voir-moins {
+    display: inline;
+}
 
 .contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 340px;
-    padding: 70px 20px;
     background: #80ACD7;
-   
+
+}
+
+.contact h3 {
+    color: white;
+    font-size: 50px;
+    display: flex;
+    text-shadow: -1px -1px 4px rgb(0 0 0 / 39%);
 }
 
 .contact h4 {
     font-size: 1.5rem;
 }
+.lien{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.questions{
+    margin-top: 40px;
+    padding-left: 40px;
 
+}
 .questions,
 .ocean {
     width: 320px;
-    text-align: left;
+    
 }
 
 .mail {
     display: flex;
-    flex-direction: row ;
+    flex-direction: row;
     text-align: left;
-   border: none;
-   gap: 10px;
+    border: none;
+    gap: 10px;
 }
 
 .mail label {
@@ -276,7 +381,7 @@ header {
     padding-left: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-     font-family: "Anton", sans-serif;
+    font-family: "Anton", sans-serif;
     font-size: 12px;
     transition: border-color 0.3s;
 }
@@ -297,54 +402,269 @@ header {
     color: #F0B33D;
 }
 
-.ocean{
-    display:flex;
+.ocean {
+    display: flex;
 }
+
 .ocean .logo {
     width: 100px;
     margin-bottom: 10px;
 }
 
-.textocean{
-     display: flex;
-   flex-direction: column;
-}
-.infos{
-   display: flex;
-   flex-direction: column;
-   gap: 5px;
-}
-
-.regroupement{
-     display: flex;
-   flex-direction: column;
-   gap: 60px;
-   align-items: flex-end;
-}
-footer {
-   position: absolute;
-  bottom: 0;
-      display: flex;
-    flex-wrap: wrap;
-    text-align: start;
-    gap: 10px;
-}
-
-footer .fa{
+.textocean {
     display: flex;
-    align-items: end;
+    flex-direction: column;
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.regroupement {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: #80ACD7;
+    border-top: white solid 1px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 1150px){
+    .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+}
+}
+@media (max-width: 1112px) {
+    
+    
+    .propos .logo {
+    width: 350px;
+    height: 350px;
+margin-bottom: auto;
+        margin-top: auto;
     }
 
-    .slogan {
-        font-size: 1.8rem;
-    }
+    .propos h3 {
 
-    .photos {
-        grid-template-columns: 1fr;
+    font-size: 45px;
+    
+}
+
+.propos p {
+   
+    font-size: 18px;
+  
+}
+    
+    .boeufs {
+    width: 250px;
+
+}
+
+.pirogue {
+    width: 250px;
+
+}
+
+.tambour {
+    width: 250px;
+    margin-bottom: 60px;
+}
+
+.enfants {
+    width: 400px;
+
+}
+
+.tamtam {
+    width: 400px;
+
+}
+
+.tamoul {
+    width: 220px;
+    height: 170px;
+}
+
+.bateau {
+    width: 350px;
+
+}
+
+.beach {
+    width: 350px;
+}
+
+.dames {
+    width: 350px;
+}
+
+.menage {
+    width: 150px;
+}
+ul {
+    font-size: 20px;
+}
+}
+@media (max-width: 962px){
+    
+    .propos p {
+    font-size: 15px;
+}
+    
+    .boeufs {
+    width: 200px;
+
+}
+
+.pirogue {
+    width: 200px;
+
+}
+
+.tambour {
+    width: 200px;
+    margin-bottom: 40px;
+}
+
+.enfants {
+    width: 350px;
+
+}
+
+.tamtam {
+    width: 350px;
+
+}
+.tamoul {
+    width: 220px;
+    height: 140px;
+}
+
+.bateau {
+    width: 300px;
+
+}
+
+.beach {
+    width: 330px;
+}
+
+.dames {
+    width: 330px;
+}
+
+.menage {
+    width: 140px;
+}
+ul {
+    font-size: 17px;
+}
+ .navbar ul {
+    gap: 60px;
+
+}
+.contact h3 {
+  
+    font-size: 40px;
+}
+
+}
+@media (max-width: 856px){
+   
+   .propos .logo {
+    width: 300px;
+    height: 300px;
+margin-bottom: auto;
+        margin-top: auto;
+    }
+    .enfants {
+    width: 300px;
+
+}
+
+.tamtam {
+    width: 300px;
+
+}
+.bateau {
+    width: 250px;
+
+}
+
+.beach {
+    width: 350px;
+}
+}
+@media (max-width: 777px){
+   .navbar ul {
+    gap: 40px;
+}
+}
+@media (max-width: 706px){
+.planet, 
+.pic,
+.nous,
+.phone,
+.reach{
+    display: none;
+}
+    .navbar {
+    background-color: rgba(0, 0, 0, 0.356);
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+}
+
+.navbar li {
+    margin: 10px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+
+}
+.propos{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+    .textpropos{
+    display: none;
+}
+.proposmobile{
+    display: block;
+    text-align: center;
+    font-size: 29px;
+}
+ .propos .logo {
+    width: 100px;
+    height: 100px;
+margin-top: 0;
     }
 }
