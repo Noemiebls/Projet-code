@@ -49,8 +49,8 @@ header {
 
     color: white;
     text-align: center;
-    display: flex;
 
+    width: 100%;
 }
 
 
@@ -84,6 +84,9 @@ header {
     border-bottom: 2px solid #F0B33D;
 }
 
+.navbarmobile {
+    display: none;
+}
 
 .home {
     background: url("images/femmes.webp");
@@ -95,7 +98,7 @@ header {
     flex-direction: column;
     color: white;
     position: relative;
-     overflow: visible;
+    overflow: visible;
 }
 
 .phone {
@@ -110,13 +113,13 @@ header {
     min-width: 130px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
-     white-space: nowrap;
-     right: 0
+    white-space: nowrap;
+    right: 0
 }
 
 .phone:hover .num {
     display: block;
-    
+
 }
 
 .slogan {
@@ -189,11 +192,12 @@ header {
     flex-direction: column;
     display: block;
 }
- .proposmobile{
+
+.proposmobile {
     display: none;
- font-family: "Anton", sans-serif;
- color: white;
- }
+    font-family: "Anton", sans-serif;
+    color: white;
+}
 
 .propos .logo {
     width: 400px;
@@ -296,6 +300,7 @@ header {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 .toggle-checkbox:checked~.photos .hidden {
     display: flex;
 }
@@ -314,7 +319,7 @@ header {
     cursor: pointer;
 }
 
-.voir:hover{
+.voir:hover {
     background-color: #b28730;
 }
 
@@ -332,7 +337,8 @@ header {
 
 .contact {
     background: #80ACD7;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .contact h3 {
@@ -345,20 +351,23 @@ header {
 .contact h4 {
     font-size: 1.5rem;
 }
-.lien{
+
+.lien {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.questions{
+
+.questions {
     margin-top: 40px;
     padding-left: 40px;
 
 }
+
 .questions,
 .ocean {
     width: 320px;
-    
+
 }
 
 .mail {
@@ -441,230 +450,349 @@ footer {
     padding: 20px;
 }
 
-@media (max-width: 1150px){
+@media (max-width: 1150px) {
     .navbar ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 80px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 80px;
 
+    }
 }
-}
+
 @media (max-width: 1112px) {
-    
-    
+
+
     .propos .logo {
-    width: 350px;
-    height: 350px;
-margin-bottom: auto;
+        width: 350px;
+        height: 350px;
+        margin-bottom: auto;
         margin-top: auto;
     }
 
     .propos h3 {
 
-    font-size: 45px;
-    
-}
+        font-size: 45px;
 
-.propos p {
-   
-    font-size: 18px;
-  
-}
-    
-    .boeufs {
-    width: 250px;
+    }
 
-}
-
-.pirogue {
-    width: 250px;
-
-}
-
-.tambour {
-    width: 250px;
-    margin-bottom: 60px;
-}
-
-.enfants {
-    width: 400px;
-
-}
-
-.tamtam {
-    width: 400px;
-
-}
-
-.tamoul {
-    width: 220px;
-    height: 170px;
-}
-
-.bateau {
-    width: 350px;
-
-}
-
-.beach {
-    width: 350px;
-}
-
-.dames {
-    width: 350px;
-}
-
-.menage {
-    width: 150px;
-}
-ul {
-    font-size: 20px;
-}
-}
-@media (max-width: 962px){
-    
     .propos p {
-    font-size: 15px;
-}
-    
+
+        font-size: 18px;
+
+    }
+
     .boeufs {
-    width: 200px;
+        width: 250px;
+
+    }
+
+    .pirogue {
+        width: 250px;
+
+    }
+
+    .tambour {
+        width: 250px;
+        margin-bottom: 60px;
+    }
+
+    .enfants {
+        width: 400px;
+
+    }
+
+    .tamtam {
+        width: 400px;
+
+    }
+
+    .tamoul {
+        width: 220px;
+        height: 170px;
+    }
+
+    .bateau {
+        width: 350px;
+
+    }
+
+    .beach {
+        width: 350px;
+    }
+
+    .dames {
+        width: 350px;
+    }
+
+    .menage {
+        width: 150px;
+    }
+
+    ul {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 962px) {
+
+    .propos p {
+        font-size: 15px;
+    }
+
+    .boeufs {
+        width: 200px;
+
+    }
+
+    .pirogue {
+        width: 200px;
+
+    }
+
+    .tambour {
+        width: 200px;
+        margin-bottom: 40px;
+    }
+
+    .enfants {
+        width: 350px;
+
+    }
+
+    .tamtam {
+        width: 350px;
+
+    }
+
+    .tamoul {
+        width: 220px;
+        height: 140px;
+    }
+
+    .bateau {
+        width: 300px;
+
+    }
+
+    .beach {
+        width: 330px;
+    }
+
+    .dames {
+        width: 330px;
+    }
+
+    .menage {
+        width: 140px;
+    }
+
+    ul {
+        font-size: 17px;
+    }
+
+    .navbar ul {
+        gap: 60px;
+
+    }
+
+    .contact h3 {
+
+        font-size: 40px;
+    }
 
 }
 
-.pirogue {
-    width: 200px;
+@media (max-width: 856px) {
 
-}
-
-.tambour {
-    width: 200px;
-    margin-bottom: 40px;
-}
-
-.enfants {
-    width: 350px;
-
-}
-
-.tamtam {
-    width: 350px;
-
-}
-.tamoul {
-    width: 220px;
-    height: 140px;
-}
-
-.bateau {
-    width: 300px;
-
-}
-
-.beach {
-    width: 330px;
-}
-
-.dames {
-    width: 330px;
-}
-
-.menage {
-    width: 140px;
-}
-ul {
-    font-size: 17px;
-}
- .navbar ul {
-    gap: 60px;
-
-}
-.contact h3 {
-  
-    font-size: 40px;
-}
-
-}
-@media (max-width: 856px){
-   
-   .propos .logo {
-    width: 300px;
-    height: 300px;
-margin-bottom: auto;
+    .propos .logo {
+        width: 300px;
+        height: 300px;
+        margin-bottom: auto;
         margin-top: auto;
     }
+
     .enfants {
-    width: 300px;
+        width: 300px;
 
-}
-
-.tamtam {
-    width: 300px;
-
-}
-.bateau {
-    width: 250px;
-
-}
-
-.beach {
-    width: 350px;
-}
-}
-@media (max-width: 777px){
-   .navbar ul {
-    gap: 40px;
-}
-}
-@media (max-width: 706px){
-.planet, 
-.pic,
-.nous,
-.phone,
-.reach{
-    display: none;
-}
-    .navbar {
-    background-color: rgba(0, 0, 0, 0.356);
-    text-align: center;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 100px;
-
-}
-
-.navbar li {
-    margin: 10px 20px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s, border-bottom 0.3s;
-    padding-bottom: 5px;
-
-}
-.propos{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-}
-    .textpropos{
-    display: none;
-}
-.proposmobile{
-    display: block;
-    text-align: center;
-    font-size: 29px;
-}
- .propos .logo {
-    width: 100px;
-    height: 100px;
-margin-top: 0;
     }
+
+    .tamtam {
+        width: 300px;
+
+    }
+
+    .bateau {
+        width: 250px;
+
+    }
+
+    .beach {
+        width: 350px;
+    }
+}
+
+@media (max-width: 777px) {
+    .navbar ul {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 706px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbarmobile {
+        display: block;
+        background-color: rgb(50 39 39 / 68%);
+        text-align: center;
+        width: 100%;
+    }
+
+   
+    .menu {
+        position: relative;
+        list-style: none;
+        
+    }
+
+    .roll {
+        display: none;
+        position: absolute;
+        background-color: #857e7e7f;
+    }
+
+    .menu:hover .roll {
+        display: block;
+    }
+
+
+    .roll li {
+        margin: 10px 20px;
+        list-style: none;
+    }
+
+    .navbarmobile h1 {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .navbarmobile>ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 40px;
+        list-style: none;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbarmobile a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s, border-bottom 0.3s;
+        font-size: larger;
+
+    }
+.fa-solid.fa-bars{
+    font-size: 35px;
+}
+    .propos {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+    .propos h3{
+        justify-content: center;
+    }
+
+    .textpropos {
+        display: none;
+    }
+
+    .proposmobile {
+        display: block;
+        text-align: center;
+        font-size: 29px;
+    }
+
+    .propos .logo {
+        width: 100px;
+        height: 100px;
+        margin-top: 0;
+        position:absolute;
+        margin-right: 60%;
+    }
+
+   .photos img,
+    .photos .hidden img {
+        width: -webkit-fill-available;
+        max-width: 100%;
+
+}
+.tamoul {
+        width: 220px !important;
+        height: 140px;
+        max-width: 220px !important;
+    }
+
+    
+.ocean{
+        order: 1;
+        font-size: 180%;
+        justify-content: center;
+        align-items: self-end;
+    } 
+
+    .ocean .logo{
+        width: 25%;
+    }
+.textocean h4{
+    font-size: larger;
+    text-align: center;
+}
+
+.textocean p {
+    display: none;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+    .contact h3{
+        order: 2;
+        font-size: smaller;
+    }
+    
+  .ocean {
+    order: 1; /* Logo + "OCEANSOUL" en premier */
+  }
+  
+  
+  .infos {
+    order: 3; /* Tel, email, adresse après le h3 */
+  }
+  
+  .questions {
+    order: 4; /* "SI VOUS AVEZ DES QUESTIONS" */
+  }
+  
+  .regroupement {
+    order: 5; /* Texte + formulaire en bas */
+  }
+  
+  /* Ajustements visuels */
+  .ocean,
+  .infos,
+  .questions,
+  .regroupement {
+    width: 100%;
+  }
+  
+  .ocean {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
 }
