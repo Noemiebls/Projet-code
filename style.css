@@ -691,10 +691,7 @@ footer {
     .proposmobile p {
         font-size: 20px;
     }
-}
-
-@media (max-width: 320px) {
-    .navbarmobile>ul {
+     .navbarmobile>ul {
         padding: 1px 20px;
     }
     .navbarmobile a {
@@ -712,11 +709,7 @@ footer {
         padding: 3px;
         text-shadow: 2px 3px 4px rgb(0 0 0 / 39%);
     }
-    .propos .logo {
-        width: 55px;
-        height: 55px;
-        margin-right: 248px;
-    }
+   
     .propos p {
         font-size: 14px;
         width: 223px;
@@ -748,7 +741,25 @@ footer {
         height: 30px;
         font-size: 20px;
     }
-    .textocean h4 {
+ 
+}
+
+@media (max-width: 320px) {
+    .navbarmobile>ul {
+        padding: 1px 20px;
+    }
+   
+   
+    .home {
+        height: 340px;
+    }
+    
+    .propos .logo {
+        width: 55px;
+        height: 55px;
+        margin-right: 248px;
+    }
+   .textocean h4 {
         font-size: 25px;
     }
     .ocean {
