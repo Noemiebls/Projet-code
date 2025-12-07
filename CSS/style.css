@@ -173,7 +173,7 @@ header {
 
     font-size: 50px;
     display: flex;
-    text-shadow: -1px -1px 4px rgb(0 0 0 / 39%);
+    text-shadow: 1px 4px 4px rgb(0 0 0 / 39%);
 }
 
 .propos p {
@@ -650,11 +650,11 @@ footer {
         width: 100%;
     }
 
-   
+
     .menu {
         position: relative;
         list-style: none;
-        
+
     }
 
     .roll {
@@ -695,15 +695,18 @@ footer {
         font-size: larger;
 
     }
-.fa-solid.fa-bars{
-    font-size: 35px;
-}
+
+    .fa-solid.fa-bars {
+        font-size: 35px;
+    }
+
     .propos {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-start;
     }
-    .propos h3{
+
+    .propos h3 {
         justify-content: center;
     }
 
@@ -717,82 +720,282 @@ footer {
         font-size: 29px;
     }
 
+    .propos p {
+        font-size: 30px;
+        text-align: center;
+        margin: 0;
+    }
+
     .propos .logo {
         width: 100px;
         height: 100px;
         margin-top: 0;
-        position:absolute;
-        margin-right: 60%;
+        position: absolute;
+        margin-right: 390px;
     }
 
-   .photos img,
+    .photos img,
     .photos .hidden img {
         width: -webkit-fill-available;
         max-width: 100%;
 
-}
-.tamoul {
+    }
+
+    .tamoul {
         width: 220px !important;
         height: 140px;
         max-width: 220px !important;
     }
 
-    
-.ocean{
+
+    .ocean {
         order: 1;
         font-size: 180%;
         justify-content: center;
         align-items: self-end;
-    } 
+    }
 
-    .ocean .logo{
+    .ocean .logo {
         width: 25%;
     }
-.textocean h4{
-    font-size: larger;
-    text-align: center;
-}
 
-.textocean p {
-    display: none;
-}
-.contact{
-    display: flex;
-    flex-direction: column;
-}
-    .contact h3{
+    .textocean h4 {
+        font-size: larger;
+        text-align: center;
+    }
+
+    .textocean p {
+        display: none;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact h3 {
         order: 2;
         font-size: smaller;
     }
-    
-  .ocean {
-    order: 1; /* Logo + "OCEANSOUL" en premier */
-  }
-  
-  
-  .infos {
-    order: 3; /* Tel, email, adresse après le h3 */
-  }
-  
-  .questions {
-    order: 4; /* "SI VOUS AVEZ DES QUESTIONS" */
-  }
-  
-  .regroupement {
-    order: 5; /* Texte + formulaire en bas */
-  }
-  
-  /* Ajustements visuels */
-  .ocean,
-  .infos,
-  .questions,
-  .regroupement {
-    width: 100%;
-  }
-  
-  .ocean {
-    text-align: center;
-    margin-bottom: 30px;
-  }
 
+    .lien {
+        display: contents;
+    }
+
+    .regroupement {
+        display: contents;
+    }
+
+    .ocean {
+        order: 1;
+        font-size: 180%;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .ocean .logo {
+        width: 13%;
+    }
+
+    .textocean h4 {
+        font-size: larger;
+        text-align: center;
+
+    }
+
+    .textocean p {
+        display: none;
+    }
+
+    .contact h3 {
+        order: 2;
+        font-size: 35px;
+        justify-content: center;
+        text-align: center;
+        margin: 20px 0;
+        text-shadow: 3px 4px 4px rgb(0 0 0 / 39%);
+    }
+
+    .questions {
+        order: 4;
+        padding: 0 20px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        position: relative;
+        padding-top: 15px;
+    }
+
+    .questions::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 10%;
+        right: 10%;
+        height: 1px;
+        background-color: white;
+    }
+
+    .questions::after {
+        content: "";
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        height: 1px;
+        background-color: white;
+        margin-top: 30px;
+    }
+
+    .mail {
+        justify-content: center;
+    }
+
+    .mail input {
+        border-radius: 30px;
+    }
+
+    .mail button {
+        border-radius: 30px;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+
+    .infos {
+        order: 3;
+        font-size: larger;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        border-top: 0;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .icone {
+        font-size: 40px;
+    }
+
+    .cookies {
+        background-color: #e0e0e0;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 492px) {
+    .propos .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+@media (max-width: 426px) {
+    .propos .logo {
+        width: 70px;
+        height: 70px;
+        margin-right: 300px;
+    }
+
+    .proposmobile h3 {
+        font-size: 30px;
+    }
+
+    .proposmobile p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .navbarmobile>ul {
+        padding: 1px 20px;
+
+    }
+
+    .navbarmobile a {
+        font-size: 25px;
+    }
+
+    .fa-solid.fa-bars {
+        font-size: 23px;
+    }
+
+    .home {
+        background: url("images/femmes.webp");
+        background-size: cover;
+        height: 340px;
+
+    }
+
+    .slogan {
+        font-size: 9px;
+        margin-top: 80px;
+        padding: 3px;
+        text-shadow: 2px 3px 4px rgb(0 0 0 / 39%);
+    }
+
+    .propos .logo {
+        width: 55px;
+        height: 55px;
+        margin-right: 248px;
+    }
+
+    .propos p {
+        font-size: 14px;
+        width: 223px;
+        text-shadow: none;
+    }
+.galerie h3{
+   font-size:40px ; 
+}
+    .proposmobile {
+        font-size: 0;
+    }
+
+    .boeufs {
+        order: 3;
+    }
+
+    .tambour {
+        order: 1;
+    }
+
+    .pirogue {
+        order: 2;
+    }
+
+    .tamtam {
+        order: 5;
+    }
+
+    .enfants {
+        order: 4;
+    }
+
+    .voir {
+        border-radius: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .textocean h4 {
+        font-size: 25px;
+    }
+
+    .ocean {
+        padding-top: 3px;
+    }
+
+    .contact h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
 }
